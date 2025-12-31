@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 import requests
 import urllib.robotparser
-import json
 
-DATA_URL = "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json"
 ROBOTS_URL = "https://services.swpc.noaa.gov/robots.txt"
 USER_AGENT = "AuroraBot/1.0 https://aurorabot.tmbarrett.com"
 
-HEADER_DATA_ADD = [("User-Agent", USER_AGENT), ("Accept", "application/json")]
 HEADER_ROBOTS_ADD = [("User-Agent", USER_AGENT)]
 
 def check_robots_txt():
@@ -36,4 +33,3 @@ def check_robots_txt():
         return False
     
     return True
-
