@@ -1,0 +1,32 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS metadata
+._*
+
+# Thumbnails
+Icon?
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyb
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Logs
+*.log
+
+# Editor/IDE Clutter
+.vscode/
+.idea/
+*.swp
+*.swo
