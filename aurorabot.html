@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="nofollow noindex">
+        <title>AuroraBot Information Page</title>
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f5f7;
+                color: #333;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 30px;
+                color: #1d1d1f;
+            }
+            .container {
+                background-color: white;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+            #logo {
+                height: 200px;
+                display: block;
+                margin: 0 auto 20px;
+            }
+            .inline-code {
+                display: inline-block;
+                white-space: pre;
+                font-family: monospace;
+                background: #e5e5e7;
+                padding: 2px 4px;
+                border-radius: 4px;    
+            }
+            h2 {
+                margin-top: 40px;
+                text-align: left;
+            }
+            a {
+                color: #007aff;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img id="logo" src="AuroraBotLogo.png" alt="AuroraBot logo">
+            <h1>AuroraBot Information Page</h1>
+            <p>AuroraBot is a project that I have been working on for a few months.  Previous to this iteration, it was a private notification service.</p>
+            <p>Now AuroraBot can be found on Mastodon at <a href="https://crosstalk.tech/@AuroraBot" target="_blank">AuroraBot@crosstalk.tech</a>.</p>
+            <p>AuroraBot posts every 20 minutes with the latest K-index data.</p>
+            <h2>🤖 About AuroraBot</h2>
+            <h3>User-Agent String</h3>
+            <p>AuroraBot uses the User-Agent string of <span class="inline-code">AuroraBot/1.0 https://aurorabot.tmbarrett.com</span></p>
+            <h3>Robots.txt</h3>
+            <p>We do honor robots.txt, if one is available.  It will attempt to connect and if one is not available, or we get a 404 Not Found, we will assume we are good to go.</p>
+            <ul>
+                <li>This bot checks for the <span class="inline-code">AuroraBot</span></li>
+                <li>If we receive a 404/Not Found while retrieving a robots.txt, we will assume it doesn't exist and process data as normal.</li>
+                <li>If we see that we are disallowed by robots.txt, the bot will cease and notify its admin for further handling.</li>
+            </ul>
+            <h2>😇 Ethical Guidelines & Safety</h2>
+            <ul>
+                <li>This bot does not engage in conversations.</li>
+                <li>This bot does not follow users automatically.</li>
+                <li>This bot does not scrape private data.
+                    <ul>
+                        <li>The data is specifically scraped from <a href="https://services.swpc.noaa.gov/json/planetary_k_index_1m.json" target="_blank">https://services.swpc.noaa.gov/json/planetary_k_index_1m.json</a></li>
+                    </ul>
+                </li>
+                <li>This bot respects robots.txt</li>
+                <li>This bot avoids posting harmful or misleading content.</li>
+                <li>This bot is not trained on user content.
+                    <ul>
+                        <li>Because this bot is not AI/ML.</li>
+                        <li>This bot is a simple grab, process, and post.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>📦 Design Choices</h2>
+            <ul>
+                <li>Written in Python 🐍</li>
+                <li>Runs in a Docker Container 📦</li>
+                <li>Triggered by cron every 20 minutes ⏰</li>
+                <li>Uses Mastodon API for posting 📲</li>
+                <li>Uses requests for fetching data. 📊</li>
+            </ul>
+            <h3>🔧 Technical Details</h3>
+            <h4>Libraries Used</h4>
+            <ul>
+                <li>requests</li>
+                <li>json</li>
+            </ul>
+
+            <p>👨‍💻 Project code is available on GitHub at <a href="">https://github.com/trbarrettjr/</a></p>
+            <h2>🧪 Development Philosophy</h2>
+            <p>I built this tool to share some of my passion with the world!  I really do enjoy being outdoors especially when there is an Aurora Borealis.</p>
+            <h2>🎧 Music Listened to while in Development</h2>
+            <p>I have been in the <em>Phantom of the Opera</em> kick right now.  So it has been the cast recording of Andrew Lloyd Webber's <em>Phantom of the Opera</em>.</p>
+        </div>
+    </body>
+</html>
